@@ -1,0 +1,56 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "toon3d"
+version = "0.0.5"
+description = "toon3d package"
+requires-python = ">=3.7.3"
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Programming Language :: Python",
+]
+dependencies = [
+    "black",
+    "h5py",
+    "mediapy",
+    "ipykernel",
+    "kmeans_pytorch",
+    "kornia>=0.7.0",
+    "rich>=12.5.1",
+    "scikit-learn",
+    "torchtyping",
+    "transformers==4.35.2",
+    "tyro>=0.4.0",
+    "opencv-python",
+    "colour-science",
+    "tqdm",
+    "scikit-image",
+    "ffmpeg",
+    "pycocotools", 
+    "matplotlib", 
+    "onnxruntime", 
+    "onnx",
+    "gdown==5.0.0",
+    "diffusers>=0.25.1",
+    "wandb>=0.16.2",
+    "peft>=0.6.0",
+    "viser",
+    "jaxtyping>=0.2.15",
+    "nerfstudio"
+]
+
+[tool.setuptools.packages.find]
+include = ["toon3d*"]
+
+[project.entry-points.'nerfstudio.method_configs']
+toon3d = "toon3d.toon3d_config:toon3d_config"
+
+[project.scripts]
+tnd-download-data = "toon3d.scripts.download_data:entrypoint"
+tnd-process-data = "toon3d.scripts.process_data:entrypoint"
+tnd-run = "toon3d.scripts.run:entrypoint"
+tnd-render = "toon3d.scripts.render:entrypoint"
+tnd-server = "toon3d.scripts.server:entrypoint"
+tnd-viser-vis = "toon3d.scripts.viser_vis:entrypoint"
