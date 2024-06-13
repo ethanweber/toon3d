@@ -38,6 +38,7 @@ toon3d_config = MethodSpecification(
                 # cull_scale_thresh=0.1,
                 sh_degree_interval=1,
                 output_depth_during_training=True,
+                num_downscales=0
             ),
         ),
         optimizers={
