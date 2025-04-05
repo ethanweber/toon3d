@@ -16,7 +16,7 @@ pip install -e .
 
 # Download Toon3D Dataset scenes
 
-Download the Toon3D Dataset from [here](https://huggingface.co/datasets/ethanweber/toon3d-dataset) and place the dataset folders in `data/processed`.
+Download the Toon3D Dataset from [here](https://huggingface.co/datasets/ethanweber/toon3d-dataset) or [here](https://github.com/ethanweber/toon3d-dataset) and place the dataset folders in `data/processed`.
 
 # Running the full SfM pipeline (optional, for custom data)
 
